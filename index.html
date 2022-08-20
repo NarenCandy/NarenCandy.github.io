@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    
+    <title>WEB AR</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+    <div class="demo">
+    <model-viewer id="model" src="RobotExpressive.glb" skybox-image="stadium_01_4k.hdr" auto-rotate camera-controls animation-name="wave" autoplay  ar></model-viewer>
+    </div>
+    <div class = "wrapper">
+    <button id="demos" onclick="say()">CLICK ME FOR A OG MOMENT</button>
+    <button id ="button2" input="button" onclick="run()">RUNNING</button>
+    <button id= "button" input="button" onclick="change()">WANNA SEE SOMETHING NAUGHTY ( ͡° ͜ʖ ͡°)╭∩╮</button>
+    </div>
+
+<script>
+    function say(){
+        document.getElementById("demos").innerHTML="Tha Thevdiyaa paiyaaa";
+    }
+</script>
+<script>
+    var modelViewer = document.getElementById("model");
+    function change(){
+        modelViewer.src="mm_project.glb";
+
+    }
+    function run(){
+        modelViewer.animationName="Running";
+
+    }
+</script>
+</body>
+</html>
